@@ -62,6 +62,21 @@ img {
   border-color: white;
 }
 
+.section{
+  margin: 4rem 0;
+}
+
+/* Card */
+.card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem 1.75rem;
+  background: white;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
+}
 /* Section Header */
 .section-header {
   max-width: 750px;
@@ -238,6 +253,54 @@ img {
   margin: 0.5rem 0 ;
 }
 
+
+/* Chapter Cards */
+.chapter-cards{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 1rem 2rem 4rem;
+}
+
+.chapter-cards img{
+  width: 130px;
+  margin-top: 1rem;
+}
+
+.chapter-cards h3{
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 1rem 0;
+}
+
+/* Summary */
+.summary{
+  background: var(--light-color);
+  color: var(--dark-color);
+  padding: 4rem 2rem 5rem;
+}
+
+.summary .section-list{
+  background: white;
+  padding: 2rem;
+}
+
+.summary .list-header{
+  background: var(--primary-color);
+  color: white;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 1rem 0;
+}
+
+.summary .list-item{
+  padding: 1.4rem;
+  border-bottom: 1px solid #f1f4f6;
+}
+.summary .list-item:last-child{
+border-bottom: none;
+}
 /* Media Queries */
 @media (max-width: 1200px) {
   .hero .hero-flex {
@@ -256,13 +319,8 @@ img {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
 @media (max-width: 992px) {
-  .navbar .container {
-    padding: 0;
-  }
-  .navbar img {
-    margin-right: 2rem;
-  }
   .hero {
     text-align: center;
   }
@@ -276,6 +334,9 @@ img {
   }
   .topics{
     grid-template-columns: repeat(2, 1fr);
+  }
+  .chapter-cards{
+    grid-template-columns: 1fr;
   }
 }
 @media (max-width: 768px) {
@@ -305,5 +366,9 @@ img {
   }
   .topics{
     grid-template-columns: 1fr;
+  }
+
+  .summary .container{
+    padding: 0;
   }
 }
